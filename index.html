@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+      <script>
+  window.pixelId = "67edf4c3c10671e61577006d";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/favi.webp" type="image/png" />
+    <title>Ajude Guilherme</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/glide.core.min.css" />
+    <link rel="stylesheet" href="css/glide.theme.min.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <script src="js/qrcode.min.js"></script>
+  </head>
+<script>
+  // Parâmetros que você quer passar adiante
+  const paramsToKeep = [
+    "utm_source",
+    "utm_campaign",
+    "utm_medium",
+    "utm_content",
+    "utm_term",
+    "xcod"
+  ];
+
+  function getCurrentParams() {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const result = {};
+    paramsToKeep.forEach(param => {
+      const value = urlSearchParams.get(param);
+      if (value) result[param] = value;
+    });
+    return result;
+  }
+
+  function buildQueryString(params) {
+    return Object.entries(params)
+      .map(([key, val]) => ${encodeURIComponent(key)}=${encodeURIComponent(val)})
+      .join("&");
+  }
+
+  function updateInternalLinks() {
+    const links = document.querySelectorAll("a[href]");
+    const currentParams = getCurrentParams();
+    if (Object.keys(currentParams).length === 0) return;
+
+    links.forEach(link => {
+      const href = link.getAttribute("href");
+
+      // Só aplica em links relativos (ou seja, dentro do site)
+      if (href.startsWith("/") || href.startsWith(window.location.origin)) {
+        const url = new URL(href, window.location.origin);
+        const linkParams = new URLSearchParams(url.search);
+
+        // Adiciona os parâmetros desejados
+        for (const key in currentParams) {
+          linkParams.set(key, currentParams[key]);
+        }
+
+        url.search = linkParams.toString();
+        link.setAttribute("href", url.pathname + url.search);
+      }
+    });
+  }
+
+  // Quando a página carregar, atualiza os links
+  document.addEventListener("DOMContentLoaded", updateInternalLinks);
+</script>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a>
+            <img src="images/ajudelogo.png" />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="post">
+      <h3>
+        💔 Uma história de amor, perdas e esperança Ajude o Guilherme.
+      </h3>
+      <img src="images/mano1.jpeg" />
+      <div class="image-container">
+        <div class="likes-container">
+          <img src="images/boll.png" alt="Corações" />
+          <!-- Mini Imagem que você carregou -->
+          <span>117 corações recebidos ❤️</span>
+        </div>
+      </div>
+      <a href="#button-section" class="btn-anchor">
+        <button class="post-button3">DOAR AGORA</button>
+      </a>
+      <p><strong>Nossos Pais faleceram e nos vimos sozinhos contra o mundo</strong></p>
+
+      <p>
+        Nos últimos tempos, a vida nos desafiou de formas que eu nunca imaginei enfrentar tão jovem. <strong>Perdemos nosso pai, nossa mãe…</strong>  e neste ano, também o nosso avô. Desde então, ficou só eu, o Gui e nosso tio para cuidar de tudo.</strong>.
+      </p>
+
+      <p>
+        <strong>Guilherme é uma criança muito especial. Ele tem paralisia cerebral infantil e depende de cuidados 24 horas por dia — para comer, tomar banho, dormir, tudo. Além disso, sofre com crises e convulsões frequentes.</strong>.
+      </p>
+
+      <p>
+        Desde que nos vimos sozinhos, faço o possível e o impossível para garantir ao Gui uma vida digna, mas confesso:</strong>  está cada vez mais difícil.
+
+      </p>
+
+      <p>
+        Hoje estamos vivendo uma situação de desespero. Estou desempregado, com dívidas acumuladas, aluguel atrasado e muitas vezes sem dinheiro nem pra comida. As necessidades básicas do Gui — como fraldas, itens de higiene, alimentação adequada, medicamentos e transporte para consultas — muitas vezes simplesmente não cabem no que recebemos do governo.</strong>.
+      </p>
+
+      <p>
+        "<strong
+          >Tenho tentado sobreviver com pequenos trabalhos como caricaturista, mas é muito pouco diante de tudo o que precisamos.</strong
+        >"
+      </p>
+
+      <p>
+        São essas perguntas que me fazem
+        <strong>chorar escondida no banheiro</strong> toda noite.
+      </p>
+
+      <p>
+        Já pensei em desistir…
+        <strong>a tristeza e a ansiedade têm sido companheiras constantes. Mas quando olho pro meu irmão, lembro o porquê de estar aqui. Ele é minha motivação. Meu propósito. Eu nunca vou abandonará-lo.</strong>.
+      </p>
+
+      <p>
+        Ser irmão dele não é fácil. Mas é o maior presente que já recebi na vida. O Gui me ensina sobre amor todos os dias — mesmo sem falar uma palavra.
+      </p>
+
+      <p>
+        Mas a verdade é que... <strong>a gente chegou num ponto crítico.</strong>, Eu estou desempregado. As dívidas só aumentam. O aluguel está atrasado. Às vezes não temos nem o que comer. E as necessidades básicas do Gui — fraldas, leite especial, medicação, produtos de higiene — simplesmente não cabem no pouco que a gente recebe do governo..
+      </p>
+
+      <p>
+        Tento conseguir algum dinheiro como caricaturista, fazendo desenhos em festas, eventos ou por encomenda. Mas é muito, muito pouco.
+      </p>
+
+      <p>
+        Mas aí eu olho pro Guilherme... e lembro porque estou aqui.
+
+Ele depende de mim. E eu prometi a mim mesmo que, enquanto eu estiver vivo, ele nunca vai ser abandonado. Nunca.
+      </p>
+
+      <p>
+        Já pensei em desistir várias vezes. Às vezes a tristeza vem com tanta força que eu me pergunto se vou aguentar.
+
+Mas aí eu olho pro Guilherme... e lembro porque estou aqui.
+
+Ele depende de mim. E eu prometi a mim mesmo que, enquanto eu estiver vivo, ele nunca vai ser abandonado. Nunca.
+      </p>
+      <img src="images/laudo.webp" style="width: 90%; height: auto" />
+    
+      <p>
+        É a mesma <strong>tecnologia</strong> usada por
+        <strong>cirurgiões</strong> pra operar à distância, adaptada para
+        devolver a <strong>independência</strong> a crianças como o Guilherme.
+      </p>
+      <img src="images/mano2.jpeg" style="width: 90%; height: auto" />
+      <p><strong>Gusttavo Limma e outro empressario estão nessa causa tambem e DOBRARAM cada doação que for feita ao Lorenzo, isso vai ajudar DEMAIS e agora mais do que nunca precisaremos da sua ajuda!!!</strong>
+        Se você está lendo isso agora, eu te peço com o coração aberto: nos ajude.
+
+Assista nosso vídeo. Veja com seus próprios olhos quem é o Guilherme, quem somos nós.
+
+E se puder doar qualquer valor, saiba que estará ajudando dois irmãos a continuar lutando juntos — com dignidade, com carinho, com esperança.
+
+Você pode ser a diferença entre a dor e o alívio. Entre o desespero e a esperança.
+      </p>
+      <a href="#button-section" class="btn-anchor">
+        <button class="post-button3">DOAR AGORA</button>
+      </a>
+      <p><strong>Você receberá:</strong></p>
+
+      <p><strong>● Atualizações semanais</strong> da nossa jornada</p>
+      <p><strong>● Vídeo do primeiro abraço</strong> dele com a prótese</p>
+      <p><strong>● Seu nome na nossa lista de anjos</strong> (se desejar)</p>
+
+      <p>
+        <strong>Compartilhe nossa história</strong>. Cada compartilhamento é uma
+        <strong>nova chance</strong> de devolver a infância ao meu filho.
+      </p>
+
+      <p><strong>Que Deus abençoe você e a sua família</strong>.</p>
+
+      <p><strong>Att: Sandra, Mãe do Guilherme</strong>.</p>
+
+ <div id="button-section">
+        <div class="progress-content">
+          <div class="progress-text">
+            <h4>Arrecadado</h4>
+            <div class="progress-values">
+              <p>R$ 42.450,41</p>
+              <p>R$ 287.000,00</p>
+            </div>
+          </div>
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 14%">
+              <strong>14%</strong>
+            </div>
+          </div>
+        </div>
+
+        <h4 style="text-align: center;">Clique no valor <br> que deseja doar</h4>
+        <p class="donation-multiplier"><strong>✨ DOAÇÃO DUPLICADA! ✨</strong>
+         Doações a partir de R$50 serão multiplicadas por 2 pelos nossos patrocinadores e grupo de empresários que apoiam nossa campanha! Sua ajuda vale o dobro até 15/07. Não perca essa oportunidade de maximizar seu impacto na vida do Guilherme!</p>
+        </div>
+        </div>
+        <div class="buttons-section">
+          <div class="buttons-section1">
+            <a href="#">
+              <button class="post-button2">R$ 30</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2" style="border: 2px solid #ffcc00; box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);">R$ 50</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 80</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 150</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 250</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 350</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 450</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 600</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 900</button>
+            </a>
+          </div>
+          <div class="buttons-section1">
+            <a href="#">
+              <button class="post-button2">R$ 40</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 70</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 100</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 200</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 300</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 400</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 500</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 700</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 1000</button>
+            </a>
+          </div>
+        </div>
+          <div class="sc-jXbUNg gNPJrz">
+            <div class="sc-jXbUNg dHwLb">
+              <div class="sc-jXbUNg jbBvcf"></div>
+              <div class="sc-jXbUNg dTrGCo sc-gRtvSG fpURXW"></div>
+            </div>
+          </div>
+
+          <div class="button-pix">
+            <div class="texto" id="1">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Lista de Doadores -->
+      <section class="donors-list-section">
+        <h3 style="text-align:center; margin-bottom: 18px;">Lista de Doadores Recentes</h3>
+        <ul class="donors-list">
+          <li><span class="donor-name">Ana Paula</span> <span class="donor-amount">doou R$ 120,00</span></li>
+          <li><span class="donor-name">Anônimo</span> <span class="donor-amount">doou R$ 50,00</span></li>
+          <li><span class="donor-name">Carlos Henrique</span> <span class="donor-amount">doou R$ 300,00</span></li>
+          <li><span class="donor-name">Fernanda Souza</span> <span class="donor-amount">doou R$ 25,00</span></li>
+          <li><span class="donor-name">Anônimo</span> <span class="donor-amount">doou R$ 5,00</span></li>
+          <li><span class="donor-name">João Pedro</span> <span class="donor-amount">doou R$ 500,00</span></li>
+          <li><span class="donor-name">Mariana Lima</span> <span class="donor-amount">doou R$ 80,00</span></li>
+          <li><span class="donor-name">Anônimo</span> <span class="donor-amount">doou R$ 200,00</span></li>
+          <li><span class="donor-name">Lucas Almeida</span> <span class="donor-amount">doou R$ 45,00</span></li>
+          <li><span class="donor-name">Patrícia Silva</span> <span class="donor-amount">doou R$ 15,00</span></li>
+        </ul>
+      </section>
+      <!-- Fim da Lista de Doadores -->
+      <footer>
+        <div class="footer-container">
+          <div class="footer-section logo-section">
+            <a>
+              <img src="images/ajudelogo.png" />
+            </a>
+          </div>
+
+          <div class="footer-bottom">
+            <p>2025 - Todos direitos reservados</p>
+          </div>
+        </div>
+      </footer>
+
+      <script data-cfasync="false" src="js/email-decode.min.js"></script>
+      <script src="js/script.js"></script>
+      <script src="js/pix.js"></script>
+      <script src="js/toast.js"></script>
+      <script>
+        function copyEmail() {
+          const emailText = document.getElementById('donation-email').textContent;
+          navigator.clipboard.writeText(emailText)
+            .then(() => {
+              showToast('Email copiado com sucesso!', 'success');
+            })
+            .catch(err => {
+              console.error('Erro ao copiar email: ', err);
+              showToast('Erro ao copiar email', 'error');
+            });
+        }
+
+        function showToast(message, type) {
+          const toast = document.createElement('div');
+          toast.className = 'toast ' + type;
+          toast.innerHTML = `
+            <div class="toast-content">
+              <span>${message}</span>
+            </div>
+          `;
+          document.body.appendChild(toast);
+          
+          // Mostra o toast
+          setTimeout(() => {
+            toast.classList.add('show');
+          }, 100);
+          
+          // Remove o toast após 3 segundos
+          setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => {
+              document.body.removeChild(toast);
+            }, 300);
+          }, 3000);
+        }
+      </script>
+      <style>
+        .email-donation {
+          margin: 20px auto;
+          max-width: 500px;
+          text-align: center;
+        }
+        .email-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          margin: 0 auto 20px;
+          padding: 12px;
+          background-color: #f5f8ff;
+          border-radius: 8px;
+          border: 1px solid #ccdeff;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+          max-width: 450px;
+        }
+        #donation-email {
+          font-weight: bold;
+          color: #3366cc;
+          font-size: 16px;
+        }
+        #copy-email-btn {
+          background-color: #1e88e5;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          padding: 8px 15px;
+          cursor: pointer;
+          font-weight: bold;
+          transition: background-color 0.3s;
+        }
+        #copy-email-btn:hover {
+          background-color: #1565c0;
+          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilos da Toast */
+        .toast {
+          position: fixed;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%) translateY(100px);
+          padding: 12px 20px;
+          border-radius: 4px;
+          color: white;
+          font-weight: 500;
+          z-index: 9999;
+          opacity: 0;
+          transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+          max-width: 80%;
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .toast.show {
+          transform: translateX(-50%) translateY(0);
+          opacity: 1;
+        }
+        
+        .toast.success {
+          background-color: #43a047;
+        }
+        
+        .toast.error {
+          background-color: #e53935;
+        }
+        
+        .toast-content {
+          display: flex;
+          align-items: center;
+        }
+      </style>
+      .donors-list-section {
+        background: #f8fafc;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        margin: 32px auto 24px auto;
+        max-width: 500px;
+        padding: 24px 18px 12px 18px;
+      }
+      .donors-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .donors-list li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 0;
+        border-bottom: 1px solid #e3e8f0;
+        font-size: 16px;
+      }
+      .donors-list li:last-child {
+        border-bottom: none;
+      }
+      .donor-name {
+        font-weight: 600;
+        color: #2d3a4b;
+      }
+      .donor-amount {
+        color: #1e88e5;
+        font-weight: 500;
+      }
+  </body>
+</html>
