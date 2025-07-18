@@ -73,6 +73,32 @@
   // Quando a página carregar, atualiza os links
   document.addEventListener("DOMContentLoaded", updateInternalLinks);
 </script>
+<script>
+  // Função para obter os parâmetros UTM da URL
+  function getUtmParams() {
+    const params = new URLSearchParams(window.location.search);
+    const utmKeys = [
+      'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'utm_id', 'fbclid', 'gclid'
+    ];
+    const utmParams = [];
+    utmKeys.forEach(key => {
+      if (params.has(key)) {
+        utmParams.push(`${key}=${encodeURIComponent(params.get(key))}`);
+      }
+    });
+    return utmParams.length ? '?' + utmParams.join('&') : '';
+  }
+
+  // Ao carregar a página, adiciona os parâmetros UTM aos links dos botões de doação
+  document.addEventListener('DOMContentLoaded', function() {
+    const utm = getUtmParams();
+    if (utm) {
+      document.querySelectorAll('.buttons-section1 a').forEach(function(a) {
+        a.href += utm;
+      });
+    }
+  });
+</script>
   <body>
     <header>
       <div class="container">
